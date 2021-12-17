@@ -1,0 +1,313 @@
+html,
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.symbol {
+  width: fit-content;
+  display: none;
+  margin: 0 auto 0 auto;
+  transform: translate(0px, 20px);
+}
+
+.symbol img {
+  display: none;
+}
+
+.container {
+  background-image: url(img/stefan-stefancik--g7axSVst6Y-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.name {
+  width: fit-content;
+  transform: translate(0, 50px);
+  margin: 169px auto 0 auto;
+  user-select: none;
+  display: none;
+}
+
+.name h1 {
+  font-size: 51.3px;
+  margin: 0 auto;
+  cursor: default;
+  width: fit-content;
+  color: white;
+  display: none;
+  transform: translate(0, -50px);
+  font-weight: 500;
+  font-family: Arial;
+  text-align: center;
+}
+
+#askName {
+  border: none;
+  border-bottom: 3px solid white;
+  padding: 0;
+  background-color: transparent;
+  text-align: center;
+  width: 91.2%;
+  color: white;
+  display: none;
+  position: relative;
+  font-family: Arial;
+  bottom: 34px;
+  left: 27.5px;
+  font-size: 51px;
+}
+
+.warning {
+  width: fit-content;
+  margin: 46px auto 0 auto;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+  font-size: 18px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.9s, opacity 0.5s 0.9s;
+  user-select: none;
+}
+
+.continue {
+  position: relative;
+  top: -21px;
+  bottom: 21px;
+  width: fit-content;
+  margin: 0 auto 0 auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s, top 0.45s, bottom 0.45s;
+}
+
+@media screen and (max-width: 1365px) {
+  .continue {
+    left: 0;
+  }
+}
+
+.continue button {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  padding: 7px 23px 8px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  letter-spacing: 0.7px;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.continue span i {
+  font-size: 15px;
+  transform: translate(3px, 0.4px);
+}
+
+.continue button:hover {
+  background-color: rgba(255, 255, 255, 0.045);
+  /* background-color: white; */
+  /* color: #444; */
+}
+
+input:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+.time,
+.toDoList,
+.askToDo {
+  display: none;
+}
+
+.time {
+  position: relative;
+  font-size: 160px;
+  cursor: default;
+  color: white;
+  margin: 0 auto;
+  user-select: none;
+  top: 207px;
+  width: fit-content;
+  font-family: Arial !important;
+  letter-spacing: -5px;
+}
+
+.welcome {
+  width: fit-content;
+  position: relative;
+  top: 158px;
+  user-select: none;
+  margin: 34px auto 15px auto;
+  cursor: default;
+}
+
+.welcome h1 {
+  font-size: 51.3px;
+  font-weight: 100;
+  display: inline;
+  font-family: Arial;
+  color: white;
+  user-select: none;
+  height: fit-content;
+}
+
+.welcome #userName {
+  background-color: transparent;
+  transition: background-color 0.95s;
+  border-radius: 3px;
+  /* padding: 1px; */
+}
+
+.welcome #changeName {
+  border: none;
+  border-bottom: 3px solid white;
+  border-radius: 5px 5px 0 0;
+  font-size: 51.3px;
+  text-align: center;
+  font-weight: 100;
+  margin: 0;
+  width: 50%;
+  padding: 0;
+  white-space: nowrap;
+  display: inline;
+  background-color: white;
+  font-family: Arial;
+  color: white;
+  transition: background-color 0.95s;
+}
+
+.ToDo {
+  position: relative;
+  top: 155px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.askToDo {
+  width: fit-content;
+  visibility: visible;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.askToDo h1 {
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  font-size: 33.25px;
+  font-weight: 100;
+  cursor: default;
+}
+
+#askToDo {
+  border: 0;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  text-align: center;
+  width: 100%;
+  color: white;
+  position: relative;
+  font-family: Arial;
+  bottom: 19px;
+  left: 0px;
+  font-size: 35px;
+}
+
+.toDoList {
+  display: none;
+  margin: 0 auto;
+  position: relative;
+  bottom: 88px;
+  user-select: none;
+  width: fit-content;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.toDoList h3 {
+  color: white;
+  font-family: Arial;
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.hover {
+  margin: 0 auto;
+}
+
+.hover #To-do {
+  color: white;
+  display: inline;
+  font-family: Arial;
+  font-size: 34.2px;
+  text-decoration: none;
+  font-weight: 100;
+  transition: visibility 0s 0.7s, opacity 0.5s 0.7s linear;
+}
+
+.checkbox {
+  position: relative;
+  visibility: hidden;
+  display: inline;
+  opacity: 0;
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 10px;
+  bottom: 2px;
+}
+
+.checkbox i {
+  color: white;
+  font-size: 22.45px;
+}
+
+.cancel {
+  position: relative;
+  width: fit-content;
+  margin-left: 12.4px;
+  bottom: 0.14px;
+  visibility: hidden;
+  opacity: 0;
+  display: inline;
+  cursor: pointer;
+}
+
+.cancel img {
+  width: 19.2px;
+}
+
+.compliment {
+  color: white;
+  width: fit-content;
+  position: relative;
+  margin: 0 auto 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro",
+    "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  visibility: hidden;
+  font-size: 17px;
+  font-weight: 100;
+  opacity: 0;
+  bottom: 65px;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
